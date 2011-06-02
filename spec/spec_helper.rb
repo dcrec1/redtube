@@ -20,6 +20,10 @@ def register_tag(path)
   register "Tags.#{path}"
 end
 
+def register_star(path)
+  register "Stars.#{path}"
+end
+
 def register(path)
   FakeWeb.register_uri(:get, "http://api.redtube.com/?output=xml&data=redtube.#{path}", :body => response(path.split("&").first.split(".").last))
 end
