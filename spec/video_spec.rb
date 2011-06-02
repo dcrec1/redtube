@@ -1,16 +1,7 @@
 require 'spec_helper'
 
-def response(name)
-  File.open("#{File.dirname(__FILE__)}/responses/#{name}.xml").read
-end
-
-def register(path)
-  FakeWeb.register_uri(:get, "http://api.redtube.com/?output=xml&data=redtube.Videos.#{path}", :body => response(path.split("&").first))
-end
-
-FakeWeb.allow_net_connect = false
-register "getVideoById&video_id=15485"
-register "searchVideos&search=lesbian"
+register_video "getVideoById&video_id=15485"
+register_video "searchVideos&search=lesbian"
 
 describe Redtube::Video do
   describe ".find" do
