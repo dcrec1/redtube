@@ -1,0 +1,3 @@
+module Redtube
+  VERSION = "0.0.1"
+end
