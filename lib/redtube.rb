@@ -1,3 +1,7 @@
+require 'typhoeus'
+require 'nokogiri'
+
+require 'redtube/video'
+
 module Redtube
-  # Your code goes here...
 end
