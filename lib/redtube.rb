@@ -1,4 +1,4 @@
-require 'typhoeus'
+require 'open-uri'
 require 'nokogiri'
 
 require 'redtube/video'

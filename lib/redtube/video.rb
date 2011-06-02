@@ -13,7 +13,7 @@ module Redtube
     private
 
     def self.get(query)
-      Nokogiri::XML(Typhoeus::Request.get("http://api.redtube.com/?output=xml&#{query}").body).css("video").first
+      Nokogiri::XML(open("http://api.redtube.com/?output=xml&#{query}").read).css("video").first
     end
   end
 end
