@@ -4,9 +4,13 @@ def response(name)
   File.open("#{File.dirname(__FILE__)}/responses/#{name}.xml").read
 end
 
+def register(path)
+  FakeWeb.register_uri(:get, "http://api.redtube.com/?output=xml&data=redtube.Videos.#{path}", :body => response(path.split("&").first))
+end
+
 FakeWeb.allow_net_connect = false
-FakeWeb.register_uri(:get, "http://api.redtube.com/?output=xml&data=redtube.Videos.getVideoById&video_id=15485", :body => response("getVideoById"))
-FakeWeb.register_uri(:get, "http://api.redtube.com/?output=xml&data=redtube.Videos.searchVideos&search=lesbian", :body => response("searchVideos"))
+register "getVideoById&video_id=15485"
+register "searchVideos&search=lesbian"
 
 describe Redtube::Video do
   describe ".find" do

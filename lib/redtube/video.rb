@@ -21,7 +21,7 @@ module Redtube
       videos_by_query(query).map { |video| new video }
     end
 
-    def videos_by_query(query)
+    def self.videos_by_query(query)
       Nokogiri::XML(get(query)).css "video"
     end
 
