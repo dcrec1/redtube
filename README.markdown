@@ -4,7 +4,7 @@ Redtube is a Ruby interface to the Redtube HTTP API: <http://api.redtube.com/doc
 
 ### INSTALLATION
 
-    gem install whenever
+    gem install redtube
 
 Or with Bundler in your Gemfile.
 
