@@ -9,11 +9,15 @@ module Redtube
     end
 
     def self.get(query)
-      open("http://api.redtube.com/?output=xml&data=redtube.#{name}s.#{query}").read
+      open("http://api.redtube.com/?output=xml&data=redtube.#{plural_name}.#{query}").read
     end
 
     def self.name
       super.gsub("Redtube::", "")
+    end
+
+    def self.plural_name
+      name + "s"
     end
   end
 end
