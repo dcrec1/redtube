@@ -19,6 +19,8 @@ Or with Bundler in your Gemfile.
 
     Redtube::Star.all
 
+    Redtube::Category.all
+
 ### LICENSE
 
 Copyright (c) 2011 MIT
