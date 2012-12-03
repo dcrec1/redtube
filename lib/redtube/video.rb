@@ -6,8 +6,8 @@ module Redtube
       find_by_query("getVideoById&video_id=#{id}").first
     end
 
-    def self.search(term)
-      find_by_query "searchVideos&search=#{term}"
+    def self.search(term, page = 1)
+      find_by_query "searchVideos&search=#{term}&page=#{page}"
     end
 
     def initialize(video)
