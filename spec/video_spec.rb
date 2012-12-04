@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 register_video "getVideoById&video_id=15485"
-register_video "searchVideos&search=lesbian"
+register_video "searchVideos&search=lesbian&page=1"
 
 describe Redtube::Video do
   describe ".find" do
