@@ -23,7 +23,7 @@ Or with Bundler in your Gemfile.
 
 ### LICENSE
 
-Copyright (c) 2011 MIT
+Copyright (c) 2015 MIT
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
