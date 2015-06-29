@@ -5,11 +5,11 @@ register_star "getStarList"
 describe Redtube::Star do
   describe ".all"  do
     it "should return a list of stars" do
-      Redtube::Star.all.size.should == 1580
+      expect(Redtube::Star.all == 1580)
     end
 
     it "should return tha name" do
-      Redtube::Star.all.first.name.should eql("Nina Hartley") 
+      expect(Redtube::Star.all.first.name).to eql("Nina Hartley")
     end
   end
 end
