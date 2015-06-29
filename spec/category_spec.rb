@@ -5,11 +5,11 @@ register_category "getCategoriesList"
 describe Redtube::Category do
   describe ".all" do
     it "should return a list of categories" do
-      Redtube::Category.all.size.should == 32
+      expect(Redtube::Category.all.size).to eq(32)
     end
 
     it "should return category names" do
-      Redtube::Category.all.first.name.should == "amateur"
+      expect(Redtube::Category.all.first.name).to eql("amateur")
     end
   end
 end
